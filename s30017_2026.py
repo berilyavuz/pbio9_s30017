@@ -5,7 +5,6 @@
 #              Supports motif search, complementary strand,
 #              in silico transcription, sliding window GC
 #              analysis, and ORF identification.
-#v4
 # ============================================================
 
 import random
