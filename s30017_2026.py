@@ -5,6 +5,7 @@
 #              Supports motif search, complementary strand,
 #              in silico transcription, sliding window GC
 #              analysis, and ORF identification.
+#v2
 # ============================================================
 
 import random
@@ -95,7 +96,7 @@ def insert_name(sequence: str, name: str) -> str:
     pos = random.randint(0, len(sequence))
     return sequence[:pos] + name.lower() + sequence[pos:]
 
-
+# validate that the sequence length is within acceptable bounds
 def format_fasta(seq_id: str,
                  description: str,
                  sequence: str,
