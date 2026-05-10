@@ -76,8 +76,7 @@ def calculate_stats(sequence: str) -> dict:
     pure = [ch for ch in sequence if ch in "ACGT"]
     n = len(pure)
     if n == 0:
-        return {"A": 0.0, "C": 0.0, "G": 0.0, "T": 0.0, "GC": 0.0,
-                "gc_ratio_A": 0.0}
+        return {"A": 0.0, "C": 0.0, "G": 0.0, "T": 0.0, "GC": 0.0}
 
     counts = {base: pure.count(base) for base in "ACGT"}
     stats = {base: round(counts[base] / n * 100, 2) for base in "ACGT"}
@@ -95,7 +94,7 @@ def insert_name(sequence: str, name: str) -> str:
     pos = random.randint(0, len(sequence))
     return sequence[:pos] + name.lower() + sequence[pos:]
 
-# validate that the sequence length is within acceptable bounds
+
 def format_fasta(seq_id: str,
                  description: str,
                  sequence: str,
